@@ -1,0 +1,335 @@
+@import "../../../../../custom/base/globals.less";
+
+/**************************/
+/********* Mapping ********/
+/**************************/
+
+//Typo
+@myBaseTheme_IBusyIndicator_Spinner_fs_XtraSmall: 1rem;
+@myBaseTheme_IBusyIndicator_Spinner_fs_Small: 3rem;
+@myBaseTheme_IBusyIndicator_Spinner_fs_Medium: 4.125rem;
+@myBaseTheme_IBusyIndicator_Spinner_fs_Large: 6rem;
+@myBaseTheme_IBusyIndicator_Spinner_fs_Auto: inherit;
+
+@myBaseTheme_IBusyIndicator_Loader_fs_Small: 0.5rem;
+@myBaseTheme_IBusyIndicator_Loader_fs_Medium: 0.75rem;
+@myBaseTheme_IBusyIndicator_Loader_fs_Large: 0.875rem;
+@myBaseTheme_IBusyIndicator_Loader_fs_Auto: inherit;
+
+//Margin
+@myBaseTheme_IBusyIndicator_Loader_margin_Small: .75rem;
+@myBaseTheme_IBusyIndicator_Loader_margin_Medium: .9375rem;
+@myBaseTheme_IBusyIndicator_Loader_margin_Large: 1.125rem;
+@myBaseTheme_IBusyIndicator_Loader_margin_Auto: 1.125rem;
+
+/********* DEFAULT Mapping START *********/
+
+@myBaseTheme_IBusyIndicator_Spinner_bgc-design_default: @base_5;
+@myBaseTheme_IBusyIndicator_Spinner_bgc_active-design_default: @myBaseTheme_IBusyIndicator_Spinner_bgc-design_default;
+@myBaseTheme_IBusyIndicator_Spinner_bgc_hover-design_default: @myBaseTheme_IBusyIndicator_Spinner_bgc-design_default;
+@myBaseTheme_IBusyIndicator_Spinner_bgc_focus-design_default: @myBaseTheme_IBusyIndicator_Spinner_bgc-design_default;
+
+@myBaseTheme_IBusyIndicator_Spinner_fgc-design_default: @base_10;
+@myBaseTheme_IBusyIndicator_Spinner_fgc_active-design_default: @myBaseTheme_IBusyIndicator_Spinner_fgc-design_default;
+@myBaseTheme_IBusyIndicator_Spinner_fgc_hover-design_default: @myBaseTheme_IBusyIndicator_Spinner_fgc-design_default;
+@myBaseTheme_IBusyIndicator_Spinner_fgc_focus-design_default: @myBaseTheme_IBusyIndicator_Spinner_fgc-design_default;
+
+@myBaseTheme_IBusyIndicator_Loader_bgc-design_default: @base_5;
+@myBaseTheme_IBusyIndicator_Loader_bgc_active-design_default: @myBaseTheme_IBusyIndicator_Loader_bgc-design_default;
+@myBaseTheme_IBusyIndicator_Loader_bgc_hover-design_default: @myBaseTheme_IBusyIndicator_Loader_bgc-design_default;
+@myBaseTheme_IBusyIndicator_Loader_bgc_focus-design_default: @myBaseTheme_IBusyIndicator_Loader_bgc-design_default;
+
+/********* DEFAULT Mapping END ***********/
+
+/********* Inverted Mapping START ************/
+
+@myBaseTheme_IBusyIndicator_Spinner_bgc-design_inverted: @base_9;
+@myBaseTheme_IBusyIndicator_Spinner_bgc_active-design_inverted: @myBaseTheme_IBusyIndicator_Spinner_bgc-design_inverted;
+@myBaseTheme_IBusyIndicator_Spinner_bgc_hover-design_inverted: @myBaseTheme_IBusyIndicator_Spinner_bgc-design_inverted;
+@myBaseTheme_IBusyIndicator_Spinner_bgc_focus-design_inverted: @myBaseTheme_IBusyIndicator_Spinner_bgc-design_inverted;
+
+@myBaseTheme_IBusyIndicator_Spinner_fgc-design_inverted: @base_1;
+@myBaseTheme_IBusyIndicator_Spinner_fgc_active-design_inverted: @myBaseTheme_IBusyIndicator_Spinner_fgc-design_inverted;
+@myBaseTheme_IBusyIndicator_Spinner_fgc_hover-design_inverted: @myBaseTheme_IBusyIndicator_Spinner_fgc-design_inverted;
+@myBaseTheme_IBusyIndicator_Spinner_fgc_focus-design_inverted: @myBaseTheme_IBusyIndicator_Spinner_fgc-design_inverted;
+
+@myBaseTheme_IBusyIndicator_Loader_bgc-design_inverted: @base_8;
+@myBaseTheme_IBusyIndicator_Loader_bgc_active-design_inverted: @myBaseTheme_IBusyIndicator_Loader_bgc-design_inverted;
+@myBaseTheme_IBusyIndicator_Loader_bgc_hover-design_inverted: @myBaseTheme_IBusyIndicator_Loader_bgc-design_inverted;
+@myBaseTheme_IBusyIndicator_Loader_bgc_focus-design_inverted: @myBaseTheme_IBusyIndicator_Loader_bgc-design_inverted;
+/********* Inverted Mapping END **************/
+
+/**************************/
+/********* Mixins *********/
+/**************************/
+
+.myControlLibrary_IBusyIndicator_mixin_gen(@property, @colorPrefix, @design) {
+  @color: "@{colorPrefix}-design_@{design}";
+  @color_Active: "@{colorPrefix}_active-design_@{design}";
+  @color_Hover: "@{colorPrefix}_hover-design_@{design}";
+  @color_Focus: "@{colorPrefix}_focus-design_@{design}";
+
+    @{property}: @@color;
+
+  &:not([disabled]) {
+    &:active {
+        @{property}: @@color_Active;
+    }
+    &:hover {
+        @{property}: @@color_Hover;
+    }
+    &:focus {
+        @{property}: @@color_Focus;
+    }
+  }
+}
+
+.myControlLibrary_IBusyIndicator_Spinner_bgc(@design) {
+  .myControlLibrary_IBusyIndicator_mixin_gen(stroke, "myBaseTheme_IBusyIndicator_Spinner_bgc", @design);
+}
+
+.myControlLibrary_IBusyIndicator_Spinner_fgc(@design) {
+  .myControlLibrary_IBusyIndicator_mixin_gen(stroke, "myBaseTheme_IBusyIndicator_Spinner_fgc", @design);
+}
+
+.myControlLibrary_IBusyIndicator_Loader_bgc(@design) {
+  .myControlLibrary_Loader_mixin_gen(background-color, "myBaseTheme_IBusyIndicator_Loader_bgc", @design);
+}
+
+/**************************/
+/********* Styling ********/
+/**************************/
+
+//define your styles here. this mixin will be called twice (default + inverted)
+//@param @design: either "default" or "inverted" use it to call the color mixins defined at the top of this file
+.myControlLibrary_IBusyIndicator_mixin(@design: default) {
+
+  .sapUiLocalBusy, &.sapUiLocalBusy {
+
+    &.myControlLibrary_IBusyIndicator_Type_Spinner {
+
+      &.myControlLibrary_IBusyIndicator_Size_ {
+
+        &XtraSmall {
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Spinner_fs_XtraSmall;
+          }
+        }
+
+        &Small {
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Spinner_fs_Small;
+          }
+        }
+
+        &Medium {
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Spinner_fs_Medium;
+          }
+        }
+
+        &Large {
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Spinner_fs_Large;
+          }
+        }
+
+        &Auto {
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Spinner_fs_Auto;
+          }
+        }
+      }
+
+      .sapUiLocalBusyIndicatorAnimation {
+        display: flex;
+
+        & > div {
+          display: block;
+          position: relative;
+          stroke-width: 2px;
+          visibility: visible;
+          left: -0.5em;
+          animation: myBaseTheme_IBusyIndicator_rotation 2s linear infinite;
+
+          .myControlLibrary_IBusyIndicator_innerSpinner {
+            display: block;
+            position: relative;
+            fill: none;
+            stroke-width: 2px;
+            transform: translate3d(0, 0, 0);
+
+            .myControlLibrary_IBusyIndicator_innerSpinner_circle_bg {
+              .myControlLibrary_IBusyIndicator_Spinner_bgc(@design);
+            }
+
+            .myControlLibrary_IBusyIndicator_innerSpinner_circle_fg {
+              .myControlLibrary_IBusyIndicator_Spinner_fgc(@design);
+              transform-origin: center center;
+              animation: myBaseTheme_IBusyIndicator_rotation 2s linear infinite, myBaseTheme_IBusyIndicator_dash 2s ease-in-out infinite;
+              stroke-dasharray: 100, 200;
+              stroke-dashoffset: 0;
+              stroke-linecap: round;
+            }
+          }
+
+          &::before {
+            display: none;
+            animation: none;
+          }
+
+          &::after {
+            display: none;
+            animation: none;
+          }
+        }
+      }
+    }
+
+    &.myControlLibrary_IBusyIndicator_Type_Loader {
+
+      &.myControlLibrary_IBusyIndicator_Size_ {
+
+        &XtraSmall, &Small {
+
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Loader_fs_Small;
+          }
+
+          .sapUiLocalBusyIndicatorAnimation {
+
+            & > div {
+              left: ~"calc(-1.5em - @{myBaseTheme_IBusyIndicator_Loader_margin_Small})";
+            }
+
+            & > div:nth-child(2) {
+              margin: 0 @myBaseTheme_IBusyIndicator_Loader_margin_Small 0 @myBaseTheme_IBusyIndicator_Loader_margin_Small;
+            }
+          }
+        }
+
+        &Medium {
+
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Loader_fs_Medium;
+          }
+
+          .sapUiLocalBusyIndicatorAnimation {
+
+            & > div {
+              left: ~"calc(-1.5em - @{myBaseTheme_IBusyIndicator_Loader_margin_Medium})";
+            }
+
+            & > div:nth-child(2) {
+              margin: 0 @myBaseTheme_IBusyIndicator_Loader_margin_Medium 0 @myBaseTheme_IBusyIndicator_Loader_margin_Medium;
+            }
+          }
+        }
+
+        &Large {
+
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Loader_fs_Large;
+          }
+
+          .sapUiLocalBusyIndicatorAnimation {
+
+            & > div {
+              left: ~"calc(-1.5em - @{myBaseTheme_IBusyIndicator_Loader_margin_Large})";
+            }
+
+            & > div:nth-child(2) {
+              margin: 0 @myBaseTheme_IBusyIndicator_Loader_margin_Large 0 @myBaseTheme_IBusyIndicator_Loader_margin_Large;
+            }
+          }
+        }
+
+        &Auto {
+
+          .sapUiLocalBusyIndicator {
+            font-size: @myBaseTheme_IBusyIndicator_Loader_fs_Auto;
+          }
+
+          .sapUiLocalBusyIndicatorAnimation {
+
+            & > div {
+              left: ~"calc(-1.5em - @{myBaseTheme_IBusyIndicator_Loader_margin_Auto})";
+            }
+
+            & > div:nth-child(2) {
+              margin: 0 @myBaseTheme_IBusyIndicator_Loader_margin_Auto 0 @myBaseTheme_IBusyIndicator_Loader_margin_Auto;
+            }
+          }
+        }
+      }
+
+      .sapUiLocalBusyIndicatorAnimation {
+        display: flex;
+        width: 100%;
+
+        & > div {
+          .myControlLibrary_IBusyIndicator_Loader_bgc(@design);
+          visibility: visible;
+          animation: myBaseTheme_IBusyIndicator_loader 1s linear 0s infinite;
+
+          &::before {
+            display: none;
+            animation: none;
+          }
+
+          &::after {
+            display: none;
+            animation: none;
+          }
+        }
+
+        & > div:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+
+        & > div:nth-child(3) {
+          animation-delay: 0.5s;
+        }
+      }
+    }
+  }
+
+  @keyframes myBaseTheme_IBusyIndicator_rotation {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes myBaseTheme_IBusyIndicator_dash {
+    0% {
+      stroke-dasharray: 1, 1000;
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dasharray: 160, 1000;
+      stroke-dashoffset: -40;
+    }
+
+    100% {
+      stroke-dasharray: 0, 1000;
+      stroke-dashoffset: -124.33;
+    }
+  }
+
+  @keyframes myBaseTheme_IBusyIndicator_loader {
+    0% {
+      opacity: .6;
+    }
+    45% {
+      opacity: .85;
+    }
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: .6;
+    }
+  }
+
+}

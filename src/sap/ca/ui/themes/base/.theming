@@ -1,0 +1,38 @@
+{
+	"mVersionDependency": {
+		"UI5.sap/ca/ui.sap_belize": "1.52.0",
+		"UI5.sap/ca/ui": "1.52.0",
+		"UI5": "1.52.22"
+	},
+	"sEntity": "Theme",
+	"sId": "base",
+	"sLabel": "base",
+	"sVendor": "sovanta AG",
+	"oExtends": "UI5.sap/ca/ui.sap_belize",
+	"aBundled": [
+		"base--Contrast"
+	],
+	"sTextDirections": "LTR,RTL",
+	"sType": "STANDARD",
+	"sThemability": "PUBLIC",
+	"mCssScopes": {
+		"library": {
+			"sEmbeddingMethod": "APPEND",
+			"aScopes": [
+				{
+					"sLabel": "Contrast",
+					"sSelector": "sapContrast",
+					"sThemeIdSuffix": "Contrast",
+					"sThemability": "PUBLIC",
+					"aThemabilityFilter": [
+						"Color"
+					],
+					"rExcludeSelector": "\\.sapContrastPlus\\W",
+					"sEmbeddedFile": "base--Contrast.library",
+					"sEmbeddedCompareFile": "library"
+				}
+			],
+			"sBaseFile": "library"
+		}
+	}
+}

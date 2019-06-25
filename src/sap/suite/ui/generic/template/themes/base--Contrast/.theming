@@ -1,0 +1,17 @@
+{
+	"mVersionDependency": {
+		"UI5.sap/suite/ui/generic/template.sap_belize_plus": "1.52.19",
+		"UI5.sap/suite/ui/generic/template": "1.52.19",
+		"UI5": "1.52.22"
+	},
+	"sEntity": "Theme",
+	"sId": "base--Contrast",
+	"sVendor": "sovanta AG",
+	"oExtends": "UI5.sap/suite/ui/generic/template.sap_belize_plus",
+	"aBundled": [
+		"base"
+	],
+	"sBuildOptions": "SKIP",
+	"sType": "ABSTRACT",
+	"sThemability": "PRIVATE"
+}

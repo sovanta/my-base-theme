@@ -1,0 +1,112 @@
+@import "../../../../../custom/base/globals.less";
+@import "./IBusyIndicator.less";
+
+/**************************/
+/********* Mapping ********/
+/**************************/
+
+//Typo
+.myControlLibrary_Loader_label_ff {
+  .my_base_theme_ff_regular;
+}
+
+@myBaseTheme_Loader_label_fs: 1rem;
+
+//Margins
+@myBaseTheme_Loader_label_margin_top: .8125rem;
+
+/********* DEFAULT Mapping START *********/
+
+@myBaseTheme_Loader_fc-design_default: @base_2;
+@myBaseTheme_Loader_fc_active-design_default: @myBaseTheme_Loader_fc-design_default;
+@myBaseTheme_Loader_fc_hover-design_default: @myBaseTheme_Loader_fc-design_default;
+@myBaseTheme_Loader_fc_focus-design_default: @myBaseTheme_Loader_fc-design_default;
+
+/********* DEFAULT Mapping END ***********/
+
+/********* Inverted Mapping START ************/
+
+@myBaseTheme_Loader_fc-design_inverted: @base_1;
+@myBaseTheme_Loader_fc_active-design_inverted: @myBaseTheme_Loader_fc-design_default;
+@myBaseTheme_Loader_fc_hover-design_inverted: @myBaseTheme_Loader_fc-design_inverted;
+@myBaseTheme_Loader_fc_focus-design_inverted: @myBaseTheme_Loader_fc-design_inverted;
+
+/********* Inverted Mapping END **************/
+
+/**************************/
+/********* Mixins *********/
+/**************************/
+
+.myControlLibrary_Loader_mixin_gen(@property, @colorPrefix, @design) {
+  @color: "@{colorPrefix}-design_@{design}";
+  @color_Active: "@{colorPrefix}_active-design_@{design}";
+  @color_Hover: "@{colorPrefix}_hover-design_@{design}";
+  @color_Focus: "@{colorPrefix}_focus-design_@{design}";
+
+    @{property}: @@color;
+
+  &:not([disabled]) {
+    &:active {
+        @{property}: @@color_Active;
+    }
+    &:hover {
+        @{property}: @@color_Hover;
+    }
+    &:focus {
+        @{property}: @@color_Focus;
+    }
+  }
+}
+
+.myControlLibrary_Loader_fc(@design) {
+  .myControlLibrary_Loader_mixin_gen(color, "myBaseTheme_Loader_fc", @design);
+}
+
+/**************************/
+/********* Styling ********/
+/**************************/
+
+//define your styles here. this mixin will be called twice (default + inverted)
+//@param @design: either "default" or "inverted" use it to call the color mixins defined at the top of this file
+.myControlLibrary_Loader_mixin(@design: default) {
+
+  .sapMBusyIndicatorBusyArea {
+    .myControlLibrary_IBusyIndicator_mixin(@design);
+
+    //Control specific BusyIndicator Overwriting
+    &.myControlLibrary_IBusyIndicator_Size_ {
+
+      &XtraSmall, &Small {
+        min-width: ~"calc(3em + (2 * @{myBaseTheme_IBusyIndicator_Loader_margin_Small}))";
+      }
+
+      &Medium {
+        min-width: ~"calc(3em + (2 * @{myBaseTheme_IBusyIndicator_Loader_margin_Medium}))";
+      }
+
+      &Large {
+        min-width: ~"calc(3em + (2 * @{myBaseTheme_IBusyIndicator_Loader_margin_Large}))";
+      }
+
+      &Auto {
+        min-width: ~"calc(3em + (2 * @{myBaseTheme_IBusyIndicator_Loader_margin_Auto}))";
+      }
+    }
+  }
+
+  .sapMLabel {
+    .myControlLibrary_Loader_label_ff;
+    .myControlLibrary_Loader_fc(@design);
+    font-size: @myBaseTheme_Loader_label_fs;
+    margin-top: @myBaseTheme_Loader_label_margin_top;
+  }
+
+}
+
+.myControlLibrary_Loader {
+  .myControlLibrary_Loader_mixin();
+}
+
+.myControlLibrary_Loader.myControlLibrary_Loader_inverted {
+  .myControlLibrary_Loader_mixin(inverted);
+}

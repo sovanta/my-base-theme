@@ -1,0 +1,16 @@
+{
+  "name": "@sovanta/my-base-theme",
+  "version": "1.0.0",
+  "description": "This is an UI5 Theme for all openUI5 and my.control.library Library",
+  "scripts": {
+    "build": "ui5 build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@ui5/cli": "1.0.0",
+    "mkdirp": "^0.5.1"
+  },
+  "homepage": "https://sovanta.com",
+  "author": "sovanta AG",
+  "license": "MIT"
+}

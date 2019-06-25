@@ -1,0 +1,25 @@
+[class*='myBaseTheme'], & [class*='myBaseTheme'] {
+  &.sapUiIcon, .sapUiIcon {
+
+    &:focus {
+
+      html[data-sap-ui-browser^='ie'] &, html[data-sap-ui-browser^='ed'] & {
+        &:after {
+          display: none;
+        }
+      }
+
+      outline: none !important;
+    }
+  }
+}
+
+.sapMFocus .sapMInputDivWrapper:not(.sapMInputBaseDisabledInner)::before {
+  border: none;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop {
+  .sapMFocus .sapMInputDivWrapper:not(.sapMInputBaseDisabledInner)::before {
+    border: none;
+  }
+}

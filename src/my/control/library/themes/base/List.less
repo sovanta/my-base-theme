@@ -1,0 +1,225 @@
+@import "../../../../../custom/base/globals.less";
+
+// variables
+@myBaseTheme_List_showSeparatorsTile_bs_color: rgba(0, 0, 0, 0.3);
+@myBaseTheme_List_showSeparatorsAll_border-bottom: 1px solid;
+@myBaseTheme_List_showSeparatorsAll_border-color: @base_4;
+
+@myBaseTheme_List_items_background-color: @base_1;
+
+@myBaseTheme_List_showSeparatorsTile_margin: 1rem;
+@myBaseTheme_List_showSeparatorsTile_box-shadow: 0 2px 8px 0
+@myBaseTheme_List_showSeparatorsTile_bs_color;
+@myBaseTheme_List_showSeparatorsTile_border-bottom: 0px;
+
+@myBaseTheme_List_selectMode_left_margin: 0 -.5rem 0 0.5rem;
+@myBaseTheme_List_selectMode_right_margin: 0 .5rem 0 -0.5rem;
+@myBaseTheme_List_selectMode_CheckBox_padding_left: 2.375rem; //required to align Checkbox with container
+
+@myBaseTheme_List_noData_fc: @base_7;
+@myBaseTheme_List_noData_fs: 1rem;
+
+@myBaseTheme_List_noDataWrap_image-icon-margin: 0.625rem;
+@myBaseTheme_List_noDataWrap_image_fs-icon: 1.5rem;
+@myBaseTheme_List_noDataWrap_background-color: transparent;
+@myBaseTheme_List_noDataWrap_text-align: center;
+@myBaseTheme_List_noDataWrap_br: 2px 2px 0 0;
+@myBaseTheme_List_noDataWrap_padding: 0.4rem 0 0 0;
+
+@myBaseTheme_List_noDataText_bgc: transparent;
+@myBaseTheme_List_noDataText_br: 0 0 2px 2px;
+@myBaseTheme_List_noDataText_height: 2.5rem;
+@myBaseTheme_List_noDataText_border: none;
+
+@myBaseTheme_List_background-color: transparent;
+
+@myBaseTheme_ListItem_alternateBackground_bgc-even: @base_3;
+@myBaseTheme_ListItem_alternateBackground_bgc-odd: @base_1;
+@myBaseTheme_ListItem_bgc-hover: @base_4;
+@myBaseTheme_ListItem_bgc-active: @base_5;
+@myBaseTheme_ListItem_bgc-focus: @base_6;
+//mixins
+.myControlLibrary_List_header_fs {
+  .my_base_theme_fs_H2;
+}
+.myControlLibrary_List_header_ff {
+  .my_base_theme_ff_regular;
+}
+.myControlLibrary_List_items_bg {
+  background-color: @myBaseTheme_List_items_background-color;
+}
+.myControlLibrary_List_showSeparatorsTile_margin {
+  margin: @myBaseTheme_List_showSeparatorsTile_margin;
+}
+.myControlLibrary_List_showSeparatorsTile_bs {
+  box-shadow: @myBaseTheme_List_showSeparatorsTile_box-shadow;
+}
+.myControlLibrary_List_showSeparatorsTile_bb {
+  border-bottom: @myBaseTheme_List_showSeparatorsTile_border-bottom;
+}
+.myControlLibrary_List_showSeparatorsAll_bb {
+  border-bottom: @myBaseTheme_List_showSeparatorsAll_border-bottom;
+  border-color: @myBaseTheme_List_showSeparatorsAll_border-color;
+}
+.myControlLibrary_List_selectMode_left {
+  margin: @myBaseTheme_List_selectMode_left_margin;
+}
+.myControlLibrary_List_selectMode_right {
+  margin: @myBaseTheme_List_selectMode_right_margin;
+}
+.myControlLibrary_List_selectMode_RadioButton {
+  padding-right: 0;
+}
+.myControlLibrary_List_selectMode_CheckBox {
+  padding-left: @myBaseTheme_List_selectMode_CheckBox_padding_left;
+}
+.myControlLibrary_List_noDataWrap_image-icon {
+  margin: @myBaseTheme_List_noDataWrap_image-icon-margin;
+  font-size: @myBaseTheme_List_noDataWrap_image_fs-icon;
+  color: @myBaseTheme_List_noData_fc;
+}
+.myControlLibrary_List_noDataWrap_bgc {
+  background-color: @myBaseTheme_List_noDataWrap_background-color;
+}
+.myControlLibrary_List_noDataWrap_ta {
+  text-align: @myBaseTheme_List_noDataWrap_text-align;
+}
+.myControlLibrary_List_noDataWrap_br {
+  border-radius: @myBaseTheme_List_noDataWrap_br;
+}
+.myControlLibrary_List_noDataWrap_padding {
+  padding: @myBaseTheme_List_noDataWrap_padding;
+}
+.myControlLibrary_List_noDataText_fc {
+  color: @myBaseTheme_List_noData_fc;
+}
+.myControlLibrary_List_noDataText_fs {
+  font-size: @myBaseTheme_List_noData_fs;
+}
+.myControlLibrary_List_noDataText_bgc {
+  background-color: @myBaseTheme_List_noDataText_bgc;
+}
+.myControlLibrary_List_noDataText_br {
+  border-radius: @myBaseTheme_List_noDataText_br;
+}
+.myControlLibrary_List_noDataText_height {
+  height: @myBaseTheme_List_noDataText_height;
+}
+.myControlLibrary_List_noDataText_border {
+  border: @myBaseTheme_List_noDataText_border;
+}
+.myControlLibrary_List_bgc {
+  background-color: @myBaseTheme_List_background-color;
+}
+
+.myControlLibrary_List_alternateBackground_bgc-even {
+  background-color: @myBaseTheme_ListItem_alternateBackground_bgc-even;
+}
+
+.myControlLibrary_List_alternateBackground_bgc-odd {
+  background-color: @myBaseTheme_ListItem_alternateBackground_bgc-odd;
+}
+
+//styling
+.myControlLibrary_List {
+  .myControlLibrary_List_bgc;
+
+  // Header
+  .sapMListHdr {
+    .myControlLibrary_List_header_fs;
+    .myControlLibrary_List_header_ff;
+  }
+
+  &.myControlLibrary_List_alternateBackground {
+    .myControlLibrary_ListItem,
+    .sapMCLI.sapMLIB {
+      &:nth-child(even) {
+        .myControlLibrary_List_alternateBackground_bgc-even;
+      }
+      &:nth-child(odd) {
+        .myControlLibrary_List_alternateBackground_bgc-odd;
+      }
+      &:hover:not(.sapMLIBTypeInactive) {
+        background-color: @myBaseTheme_ListItem_bgc-hover;
+      }
+
+      &:focus:not(.sapMLIBTypeInactive) {
+        background-color: @myBaseTheme_ListItem_bgc-focus;
+      }
+
+      &:active:not(.sapMLIBTypeInactive) {
+        background-color: @myBaseTheme_ListItem_bgc-active;
+      }
+    }
+  }
+
+  // list items
+  &.sapMListBGSolid {
+    .sapMLIB.sapMCLI {
+      .myControlLibrary_List_items_bg;
+    }
+  }
+
+  // Selection Modes
+  .sapMListModeSingleSelect {
+    .myControlLibrary_ListItem .myControlLibrary_RadioButton.sapMRb {
+      .myControlLibrary_List_selectMode_right;
+      .myControlLibrary_List_selectMode_RadioButton;
+    }
+  }
+
+  .sapMListModeSingleSelectLeft {
+    .myControlLibrary_ListItem .myControlLibrary_RadioButton.sapMRb {
+      .myControlLibrary_List_selectMode_left;
+      .myControlLibrary_List_selectMode_RadioButton;
+    }
+  }
+
+  .sapMListModeMultiSelect {
+    .myControlLibrary_ListItem .myControlLibrary_CheckBox.sapMCb {
+      .myControlLibrary_List_selectMode_left;
+      .myControlLibrary_List_selectMode_CheckBox;
+    }
+  }
+
+  // Separators
+  .sapMListShowSeparatorsAll {
+    .sapMLIB.sapMCLI {
+      .myControlLibrary_List_showSeparatorsAll_bb;
+    }
+  }
+  .sapMListShowSeparatorsTile {
+    .sapMLIB.sapMCLI,
+    .myControlLibrary_ListItem {
+      .myControlLibrary_List_showSeparatorsTile_margin;
+      .myControlLibrary_List_showSeparatorsTile_bs;
+      .myControlLibrary_List_showSeparatorsTile_bb;
+    }
+  }
+
+  // no data image and icon
+  .myControlLibrary_List_noDataWrap {
+    .myControlLibrary_List_noDataWrap_ta;
+    .myControlLibrary_List_noDataWrap_bgc;
+    .myControlLibrary_List_noDataWrap_br;
+    .myControlLibrary_List_noDataWrap_padding;
+    .myControlLibrary_List_noDataWrap_image {
+      &.sapUiIcon {
+        .myControlLibrary_List_noDataWrap_image-icon;
+      }
+    }
+  }
+
+  .sapMListNoData {
+    .myControlLibrary_List_noDataText_fc;
+    .myControlLibrary_List_noDataText_fs;
+    .myControlLibrary_List_noDataText_bgc;
+    .myControlLibrary_List_noDataText_br;
+    .myControlLibrary_List_noDataText_border;
+    .myControlLibrary_List_noDataText_height;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,384 @@
+@import "../../../../../custom/base/globals.less";
+
+/* ================================================================= */
+/* mapping                                                           */
+/* ================================================================= */
+
+@myBaseTheme_ListItem_background-selected: @base_1;
+@myBaseTheme_ListItem_bgc: @base_1;
+@myBaseTheme_ListItem_bgc-hover: @base_4;
+@myBaseTheme_ListItem_bgc-active: @base_5;
+@myBaseTheme_ListItem_bgc-focus: @base_6;
+@myBaseTheme_ListItem_highlightBar_bgc-Default: @base_15;
+@myBaseTheme_ListItem_highlightBar_bgc-Warning: @base_21;
+@myBaseTheme_ListItem_highlightBar_bgc-Error: @base_13;
+@myBaseTheme_ListItem_highlightBar_bgc-Success: @base_20;
+@myBaseTheme_ListItem_fc-Default: @base_15;
+@myBaseTheme_ListItem_fc-Warning: @base_21;
+@myBaseTheme_ListItem_fc-Error: @base_13;
+@myBaseTheme_ListItem_fc-Success: @base_20;
+@myBaseTheme_ListItem_favoriteIcon_fc-nofavorite: @base_7;
+@myBaseTheme_ListItem_favoriteIcon_fc-favorite: @base_21;
+@myBaseTheme_ListItem_navigationIcon_color: @base_7;
+@myBaseTheme_ListItem_selectItem_bc_active: @base_9;
+
+//Font Colors
+@myBaseTheme_ListItem_color_base: @base_2;
+@myBaseTheme_ListItem_fc_base-active: @myBaseTheme_ListItem_color_base;
+@myBaseTheme_ListItem_color_title: @base_2;
+@myBaseTheme_ListItem_color_title-active: @myBaseTheme_ListItem_color_title;
+@myBaseTheme_ListItem_color_description: @base_2;
+@myBaseTheme_ListItem_color_description-active: @myBaseTheme_ListItem_color_description;
+@myBaseTheme_ListItem_color_value: @base_7;
+@myBaseTheme_ListItem_color_value-active: @myBaseTheme_ListItem_color_value;
+@myBaseTheme_ListItem_color_info: @base_7;
+@myBaseTheme_ListItem_color_info-active: @myBaseTheme_ListItem_color_info;
+@myBaseTheme_ListItem_color_icon: @base_2;
+
+@myBaseTheme_ListItem_mLibSelect_padding-left: 1rem;
+@myBaseTheme_ListItem_mLibSelect_margin: 0rem;
+@myBaseTheme_ListItem_mLibSelect_width: 2rem;
+
+@myBaseTheme_ListItem_padding: 0rem;
+
+@myBaseTheme_ListItem_title_fs: 1rem;
+@myBaseTheme_ListItem_title_lh: 1.25;
+@myBaseTheme_ListItem_description_fs: 0.875rem;
+@myBaseTheme_ListItem_description_lh: 1.43;
+@myBaseTheme_ListItem_highlightText_fs: 1rem;
+@myBaseTheme_ListItem_highlightText_lh: 1.25;
+@myBaseTheme_ListItem_info_fs: 0.75rem;
+@myBaseTheme_ListItem_info_lh: 1.5;
+@myBaseTheme_ListItem_value_fs: 0.75rem;
+@myBaseTheme_ListItem_value_lh: 1.5;
+@myBaseTheme_ListItem_preControl_padding: 0 1rem 0 0;
+@myBaseTheme_ListItem_counterProp_padding: 0 0.625rem;
+@myBaseTheme_ListItem_counterAgg_padding: 0 0 0 0.625rem;
+@myBaseTheme_ListItem_container_padding: 0.75rem 1rem;
+@myBaseTheme_ListItem_highlightBar_width: 0.5rem;
+@myBaseTheme_ListItem_favoriteIcon_fs: 1rem;
+@myBaseTheme_ListItem_favoriteIcon_width: 2.5rem;
+@myBaseTheme_ListItem_navigationIcon_font-size: 1em;
+
+.myControlLibrary_ListItem_title_ff {
+  .my_base_theme_ff_regular;
+}
+
+.myControlLibrary_ListItem_description_ff {
+  //Can be filled inside extended Theme
+}
+
+.myControlLibrary_ListItem_highlightText_ff {
+  //Can be filled inside extended Theme
+}
+
+.myControlLibrary_ListItem_info_ff {
+  //Can be filled inside extended Theme
+}
+
+.myControlLibrary_ListItem_value_ff {
+  //Can be filled inside extended Theme
+}
+
+/* ================================================================= */
+/* styling                                                           */
+/* ================================================================= */
+
+.myControlLibrary_ListItem {
+  color: @myBaseTheme_ListItem_color_base;
+  background-color: @myBaseTheme_ListItem_bgc;
+
+  &.sapMLIB {
+    padding: @myBaseTheme_ListItem_padding;
+  }
+
+  //selection mode
+  .sapMLIBSelectSL,
+  .sapMLIBSelectM {
+    padding-left: @myBaseTheme_ListItem_mLibSelect_padding-left;
+    margin: @myBaseTheme_ListItem_mLibSelect_margin;
+    width: @myBaseTheme_ListItem_mLibSelect_width;
+  }
+  &.sapMLIB.sapMLIBSelected {
+    background-color: @myBaseTheme_ListItem_background-selected;
+  }
+
+  .myControlLibrary_ListItem_highlightBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: @myBaseTheme_ListItem_highlightBar_width;
+  }
+
+  .sapMLIBContent {
+    position: relative;
+    overflow: hidden;
+
+
+    .myControlLibrary_ListItem_container {
+      padding: @myBaseTheme_ListItem_container_padding;
+      display: flex;
+      word-wrap: break-word;
+      min-height: 2.5rem;
+
+      .myControlLibrary_ListItem_preControl {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding: @myBaseTheme_ListItem_preControl_padding;
+      }
+      .myControlLibrary_ListItem_body_left {
+        overflow: hidden;
+        flex: 2;
+      }
+      .myControlLibrary_ListItem_body_right {
+        flex: 1;
+      }
+
+      .myControlLibrary_ListItem_body_left {
+        align-self: center;
+        .myControlLibrary_ListItem_title {
+          .myControlLibrary_ListItem_title_ff;
+          color: @myBaseTheme_ListItem_color_title;
+          font-size: @myBaseTheme_ListItem_title_fs;
+          line-height: @myBaseTheme_ListItem_title_lh;
+        }
+
+        .myControlLibrary_ListItem_description {
+          .myControlLibrary_ListItem_description_ff;
+          color: @myBaseTheme_ListItem_color_description;
+          font-size: @myBaseTheme_ListItem_description_fs;
+          line-height: @myBaseTheme_ListItem_description_lh;
+          &.myControlLibrary_ListItem_description-noWrap {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .myControlLibrary_ListItem_body_right {
+        align-self: start;
+        text-align: right;
+        padding-top: 2px;
+
+        .myControlLibrary_ListItem_value {
+          .myControlLibrary_ListItem_value_ff;
+          color: @myBaseTheme_ListItem_color_value;
+          font-size: @myBaseTheme_ListItem_value_fs;
+          line-height: @myBaseTheme_ListItem_value_lh;
+        }
+
+        .myControlLibrary_ListItem_info {
+          .myControlLibrary_ListItem_info_ff;
+          color: @myBaseTheme_ListItem_color_info;
+          font-size: @myBaseTheme_ListItem_info_fs;
+          line-height: @myBaseTheme_ListItem_info_lh;
+        }
+
+        .myControlLibrary_ListItem_highlightText {
+          .myControlLibrary_ListItem_highlightText_ff;
+          font-size: @myBaseTheme_ListItem_highlightText_fs;
+          line-height: @myBaseTheme_ListItem_highlightText_lh;
+        }
+
+        .myControlLibrary_ListItem_icon {
+          color: @myBaseTheme_ListItem_color_icon;
+          .sapUiIcon:focus {
+            outline: 0;
+          }
+        }
+
+        .myControlLibrary_ListItem_favoriteIcon {
+          font-size: @myBaseTheme_ListItem_favoriteIcon_fs;
+          color: @myBaseTheme_ListItem_favoriteIcon_fc-nofavorite;
+          //bigger clickable area
+          width: @myBaseTheme_ListItem_favoriteIcon_width;
+
+          &.sapUiIcon:focus {
+            outline: 0;
+          }
+
+          &.myControlLibrary_ListItem_favoriteIcon-favorite {
+            color: @myBaseTheme_ListItem_favoriteIcon_fc-favorite;
+          }
+        }
+      }
+    }
+
+    .myControlLibrary_ListItem_counter {
+      padding: @myBaseTheme_ListItem_counterAgg_padding;
+    }
+  }
+
+  .myControlLibrary_ListItem_counter {
+    align-self: center;
+    padding: @myBaseTheme_ListItem_counterProp_padding;
+  }
+
+  // Navigation icon
+  .sapMLIBImgNav.sapMLIBType.sapUiIcon {
+    font-size: @myBaseTheme_ListItem_navigationIcon_font-size;
+    color: @myBaseTheme_ListItem_navigationIcon_color;
+  }
+
+  // modifiers
+
+  // state for border
+  &.myControlLibrary_ListItem_Highlight_Default {
+    .myControlLibrary_ListItem_highlightBar {
+      background-color: @myBaseTheme_ListItem_highlightBar_bgc-Default;
+    }
+  }
+  &.myControlLibrary_ListItem_Highlight_Warning {
+    .myControlLibrary_ListItem_highlightBar {
+      background-color: @myBaseTheme_ListItem_highlightBar_bgc-Warning;
+    }
+  }
+
+  &.myControlLibrary_ListItem_Highlight_Success {
+    .myControlLibrary_ListItem_highlightBar {
+      background-color: @myBaseTheme_ListItem_highlightBar_bgc-Success;
+    }
+  }
+  &.myControlLibrary_ListItem_Highlight_Error {
+    .myControlLibrary_ListItem_highlightBar {
+      background-color: @myBaseTheme_ListItem_highlightBar_bgc-Error;
+    }
+  }
+
+  // state for icon and text
+  &.myControlLibrary_ListItem_Highlight_State_Default {
+    .sapMLIBContent {
+      .myControlLibrary_ListItem_container {
+        .myControlLibrary_ListItem_body_right {
+          .myControlLibrary_ListItem_highlightText {
+            color: @myBaseTheme_ListItem_fc-Default;
+          }
+          .myControlLibrary_ListItem_icon {
+            color: @myBaseTheme_ListItem_fc-Default;
+          }
+        }
+      }
+    }
+  }
+  &.myControlLibrary_ListItem_Highlight_State_Error {
+    .sapMLIBContent {
+      .myControlLibrary_ListItem_container {
+        .myControlLibrary_ListItem_body_right {
+          .myControlLibrary_ListItem_highlightText {
+            color: @myBaseTheme_ListItem_fc-Error;
+          }
+          .myControlLibrary_ListItem_icon {
+            color: @myBaseTheme_ListItem_fc-Error;
+          }
+        }
+      }
+    }
+  }
+  &.myControlLibrary_ListItem_Highlight_State_Success {
+    .sapMLIBContent {
+      .myControlLibrary_ListItem_container {
+        .myControlLibrary_ListItem_body_right {
+          .myControlLibrary_ListItem_highlightText {
+            color: @myBaseTheme_ListItem_fc-Success;
+          }
+          .myControlLibrary_ListItem_icon {
+            color: @myBaseTheme_ListItem_fc-Success;
+          }
+        }
+      }
+    }
+  }
+  &.myControlLibrary_ListItem_Highlight_State_Warning {
+    .sapMLIBContent {
+      .myControlLibrary_ListItem_container {
+        .myControlLibrary_ListItem_body_right {
+          .myControlLibrary_ListItem_highlightText {
+            color: @myBaseTheme_ListItem_fc-Warning;
+          }
+          .myControlLibrary_ListItem_icon {
+            color: @myBaseTheme_ListItem_fc-Warning;
+          }
+        }
+      }
+    }
+  }
+
+  &.sapMLIBLegacyOutline:focus::before {
+    border: 0 !important;
+  }
+
+  &.sapMLIBLegacyOutline:focus,
+  &.sapMLIBFocusable:focus {
+    outline: none;
+  }
+
+  &:hover:not(.sapMLIBTypeInactive), &.sapMLIBHoverable:hover {
+    background-color: @myBaseTheme_ListItem_bgc-hover;
+  }
+
+  &:focus:not(.sapMLIBTypeInactive), &.sapMLIBFocusable:focus {
+    background-color: @myBaseTheme_ListItem_bgc-focus;
+  }
+
+  &:active:not(.sapMLIBTypeInactive), &.sapMLIBActionable:active, &.sapMLIB.sapMLIBActive {
+
+    background-color: @myBaseTheme_ListItem_bgc-active;
+
+    .myControlLibrary_CheckBox.sapMCb .sapMCbBg,
+    .myControlLibrary_RadioButton.sapMRb .sapMRbB .sapMRbBOut {
+      border-color: @myBaseTheme_ListItem_selectItem_bc_active;
+    }
+
+    .sapMLIBImgNav.sapUiIcon,
+    .myControlLibrary_ListItem_body_left,
+    .myControlLibrary_ListItem_body_right {
+      div {
+        color: @myBaseTheme_ListItem_fc_base-active;
+      }
+
+      .myControlLibrary_ListItem_title {
+        color: @myBaseTheme_ListItem_color_title-active;
+      }
+
+      .myControlLibrary_ListItem_description {
+        color: @myBaseTheme_ListItem_color_description-active;
+      }
+
+      .myControlLibrary_ListItem_value {
+        color: @myBaseTheme_ListItem_color_value-active;
+      }
+
+      .myControlLibrary_ListItem_info {
+        color: @myBaseTheme_ListItem_color_info-active;
+      }
+    }
+  }
+}
+
+html.sap-tablet {
+  .myControlLibrary_ListItem {
+    &:hover {
+      background-color: @myBaseTheme_ListItem_bgc;
+
+      &.sapMLIB.sapMLIBActive {
+        background-color: @myBaseTheme_ListItem_bgc-active;
+      }
+    }
+  }
+}
+
+html.sap-phone {
+  .myControlLibrary_ListItem {
+    &:hover {
+      background-color: @myBaseTheme_ListItem_bgc;
+
+      &.sapMLIB.sapMLIBActive {
+        background-color: @myBaseTheme_ListItem_bgc-active;
+      }
+    }
+  }
+}
+

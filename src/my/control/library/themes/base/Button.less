@@ -1,0 +1,912 @@
+@import "../../../../../custom/base/globals.less";
+@import "./IBusyIndicator.less";
+
+/**************************/
+/********* Mapping ********/
+/**************************/
+
+//Typo
+.myControlLibrary_Button_text_ff {
+  .my_base_theme_ff_regular;
+}
+
+@myBaseTheme_Button_text_fs: 1rem;
+@myBaseTheme_Button_icon_fs: 1rem;
+
+//Sizes
+@myBaseTheme_Button_height_big: 3.125rem;
+@myBaseTheme_Button_height_small: 2.25rem;
+
+//Border
+@myBaseTheme_Button_border_width: 1px;
+@myBaseTheme_Button_border_radius_regular: 0;
+@myBaseTheme_Button_border_radius_circle: 50%;
+@myBaseTheme_Button_border_radius_square: 0;
+
+//Padding
+@myBaseTheme_Button_padding_default: 4px;
+@myBaseTheme_Button_padding_text: 17px;
+@myBaseTheme_Button_margin_icon_container: 8px;
+
+//Disabled
+
+/********* DEFAULT Mapping START *********/
+
+//Shape Regular
+// - Type Filled
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_default: 50%;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_disabled_opacity-design_default: 50%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_default: 50%;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_disabled_opacity-design_default: 50%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_default: 50%;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_disabled_opacity-design_default: 50%;
+
+//Shape Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_default: 40%;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_disabled_opacity-design_default: 40%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_default: 40%;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_disabled_opacity-design_default: 40%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_default: 40%;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_disabled_opacity-design_default: 40%;
+
+//Shape Non-Regular
+// - Type Filled
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_default: 50%;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_disabled_opacity-design_default: 50%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_default: 50%;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_disabled_opacity-design_default: 50%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_default: 50%;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_disabled_opacity-design_default: 50%;
+
+//Shape Non-Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_default: 40%;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_disabled_opacity-design_default: 40%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_default: 40%;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_disabled_opacity-design_default: 40%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_default: 40%;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_disabled_opacity-design_default: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_default;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_disabled_opacity-design_default: 40%;
+
+/********* DEFAULT Mapping END ***********/
+
+/********* Inverted Mapping START ************/
+
+//Shape Regular
+// - Type Filled
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_inverted: 45%;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_disabled_opacity-design_inverted: 30%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_inverted: 35%;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_disabled_opacity-design_inverted: 35%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_inverted: 35%;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_disabled_opacity-design_inverted: 35%;
+
+//Shape Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_inverted: 40%;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_disabled_opacity-design_inverted: 40%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_inverted: 40%;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_disabled_opacity-design_inverted: 40%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_inverted: 40%;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_disabled_opacity-design_inverted: 40%;
+
+//Shape Non-Regular
+// - Type Filled
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_inverted: 45%;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_disabled_opacity-design_inverted: 30%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_inverted: 35%;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_disabled_opacity-design_inverted: 35%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_inverted: 35%;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_disabled_opacity-design_inverted: 35%;
+
+//Shape Non-Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_inverted: 40%;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_disabled_opacity-design_inverted: 40%;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_inverted: 40%;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_disabled_opacity-design_inverted: 40%;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_inverted: 40%;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_disabled_opacity-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_disabled_opacity-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_disabled_opacity-design_inverted: 40%;
+
+/********* Inverted Mapping END **************/
+
+/********* DEFAULT Mapping START *********/
+
+//Shape Regular
+// - Type Filled
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc-design_default: @base_11;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_active-design_default: @base_12;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_hover-design_default: @base_12;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_focus-design_default: @base_12;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_active-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_hover-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_focus-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_default;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_active-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_hover-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_focus-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_default;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc-design_default: @base_13;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_active-design_default: @base_14;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_hover-design_default: @base_14;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_focus-design_default: @base_14;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_active-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_hover-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_focus-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_default;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_active-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_hover-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_focus-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_default;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc-design_default: @base_15;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_active-design_default: @base_16;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_hover-design_default: @base_16;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_focus-design_default: @base_16;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_active-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_hover-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_focus-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_default;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_active-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_hover-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_default;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_focus-design_default: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_default;
+
+//Shape Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_active-design_default: @base_11;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_hover-design_default: @base_11;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_focus-design_default: @base_11;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc-design_default: @base_11;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_active-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_hover-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_focus-design_default: transparent;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc-design_default: @base_2;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_active-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_hover-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_focus-design_default: @base_1;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_active-design_default: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_hover-design_default: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_focus-design_default: @base_13;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc-design_default: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_active-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_hover-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_focus-design_default: transparent;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc-design_default: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_active-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_hover-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_focus-design_default: @base_1;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_active-design_default: @base_15;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_hover-design_default: @base_15;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_focus-design_default: @base_15;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc-design_default: @base_15;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_active-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_hover-design_default: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_focus-design_default: transparent;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc-design_default: @base_15;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_active-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_hover-design_default: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_focus-design_default: @base_1;
+
+//Shape Non-Regular
+// - Type Default
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc-design_default: @base_11;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_active-design_default: @base_12;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_hover-design_default: @base_12;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_focus-design_default: @base_12;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_active-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_hover-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_focus-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_default;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_active-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_hover-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_focus-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_default;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc-design_default: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_active-design_default: @base_14;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_hover-design_default: @base_14;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_focus-design_default: @base_14;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_active-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_hover-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_focus-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_default;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_active-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_hover-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_focus-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_default;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc-design_default: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_active-design_default: @base_16;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_hover-design_default: @base_16;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_focus-design_default: @base_16;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_active-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_hover-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_focus-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_default;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_active-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_hover-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_default;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_focus-design_default: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_default;
+
+//Shape Non-Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_active-design_default: @base_11;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_hover-design_default: @base_11;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_focus-design_default: @base_11;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc-design_default: @base_11;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_active-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_hover-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_focus-design_default: transparent;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc-design_default: @base_2;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_active-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_hover-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_focus-design_default: @base_1;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_active-design_default: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_hover-design_default: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_focus-design_default: @base_13;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc-design_default: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_active-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_hover-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_focus-design_default: transparent;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc-design_default: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_active-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_hover-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_focus-design_default: @base_1;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_active-design_default: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_hover-design_default: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_focus-design_default: @base_15;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc-design_default: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_active-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_hover-design_default: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_focus-design_default: transparent;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc-design_default: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_active-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_hover-design_default: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_focus-design_default: @base_1;
+
+/********* DEFAULT Mapping END ***********/
+
+/********* Inverted Mapping START ************/
+
+//Shape Regular
+// - Type Filled
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_active-design_inverted: @base_4;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_hover-design_inverted: @base_4;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bgc_focus-design_inverted: @base_4;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_inverted: transparent;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_bc-design_inverted;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_inverted: @base_2;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_basic_fc-design_inverted;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc-design_inverted: @base_13;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_active-design_inverted: @base_14;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_hover-design_inverted: @base_14;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bgc_focus-design_inverted: @base_14;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_inverted: transparent;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_bc-design_inverted;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_highlight_fc-design_inverted;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc-design_inverted: @base_15;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_active-design_inverted: @base_16;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_hover-design_inverted: @base_16;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bgc_focus-design_inverted: @base_16;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_inverted: transparent;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_bc-design_inverted;
+
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_inverted;
+@myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_filled-semanticType_sales_fc-design_inverted;
+
+//Shape Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc-design_inverted: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_active-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_hover-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_focus-design_inverted: @base_1;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_active-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_hover-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_bgc_focus-design_inverted;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_active-design_inverted: @base_2;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_hover-design_inverted: @base_2;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_basic_fc_focus-design_inverted: @base_2;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc-design_inverted: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_active-design_inverted: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_hover-design_inverted: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_focus-design_inverted: @base_13;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc-design_inverted: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_active-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_hover-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_bgc_focus-design_inverted;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc-design_inverted: @base_13;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_active-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_hover-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_highlight_fc_focus-design_inverted: @base_1;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc-design_inverted: transparent;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_active-design_inverted: @base_15;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_hover-design_inverted: @base_15;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_focus-design_inverted: @base_15;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc-design_inverted: @base_23;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_active-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_active-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_hover-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_hover-design_inverted;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bc_focus-design_inverted: @myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_bgc_focus-design_inverted;
+
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc-design_inverted: @base_23;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_active-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_hover-design_inverted: @base_1;
+@myBaseTheme_Button-shape_regular-type_ghost-semanticType_sales_fc_focus-design_inverted: @base_1;
+
+//Shape Non-Regular
+// - Type Default
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_active-design_inverted: @base_4;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_hover-design_inverted: @base_4;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bgc_focus-design_inverted: @base_4;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_inverted: transparent;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_bc-design_inverted;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_inverted: @base_2;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_basic_fc-design_inverted;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc-design_inverted: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_active-design_inverted: @base_14;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_hover-design_inverted: @base_14;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bgc_focus-design_inverted: @base_14;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_inverted: transparent;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_bc-design_inverted;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_highlight_fc-design_inverted;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc-design_inverted: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_active-design_inverted: @base_16;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_hover-design_inverted: @base_16;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bgc_focus-design_inverted: @base_16;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_inverted: transparent;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_bc-design_inverted;
+
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_filled-semanticType_sales_fc-design_inverted;
+
+//Shape Non-Regular
+// - Type Ghost
+// -- Semantic Type Basic
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc-design_inverted: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_active-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_hover-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_focus-design_inverted: @base_1;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_active-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_hover-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_bgc_focus-design_inverted;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_active-design_inverted: @base_2;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_hover-design_inverted: @base_2;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_basic_fc_focus-design_inverted: @base_2;
+
+// -- Semantic Type Highlight
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc-design_inverted: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_active-design_inverted: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_hover-design_inverted: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_focus-design_inverted: @base_13;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc-design_inverted: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_active-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_hover-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_bgc_focus-design_inverted;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc-design_inverted: @base_13;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_active-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_hover-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_highlight_fc_focus-design_inverted: @base_1;
+
+// -- Semantic Type Sales
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc-design_inverted: transparent;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_active-design_inverted: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_hover-design_inverted: @base_15;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_focus-design_inverted: @base_15;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc-design_inverted: @base_23;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_active-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_active-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_hover-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_hover-design_inverted;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bc_focus-design_inverted: @myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_bgc_focus-design_inverted;
+
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc-design_inverted: @base_23;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_active-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_hover-design_inverted: @base_1;
+@myBaseTheme_Button-shape_non_regular-type_ghost-semanticType_sales_fc_focus-design_inverted: @base_1;
+
+/********* Inverted Mapping END **************/
+
+/**************************/
+/********* Mixins ********/
+/**************************/
+
+.myControlLibrary_Button_mixin_gen(@property, @colorPrefix, @design) {
+  @color: "@{colorPrefix}-design_@{design}";
+  @color_Active: "@{colorPrefix}_active-design_@{design}";
+  @color_Hover: "@{colorPrefix}_hover-design_@{design}";
+  @color_Focus: "@{colorPrefix}_focus-design_@{design}";
+  @opacity_disabled: "@{colorPrefix}_disabled_opacity-design_@{design}";
+
+    @{property}: @@color;
+
+  &:not([disabled]) {
+    &:active {
+        @{property}: @@color_Active;
+    }
+    &:hover {
+        @{property}: @@color_Hover;
+    }
+    &:focus {
+        @{property}: @@color_Focus;
+    }
+  }
+
+  &[disabled], &.myControlLibrary_Button_busy {
+
+    & when (alpha(@@color) > 0) {
+        @{property}: fade(@@color, @@opacity_disabled);
+    }
+  }
+}
+
+.myControlLibrary_Button_bgc(@shape, @type, @semanticType, @design) {
+  .myControlLibrary_Button_mixin_gen(background-color, "myBaseTheme_Button-shape_@{shape}-type_@{type}-semanticType_@{semanticType}_bgc", @design);
+}
+
+.myControlLibrary_Button_bc(@shape, @type, @semanticType, @design) {
+  .myControlLibrary_Button_mixin_gen(border-color, "myBaseTheme_Button-shape_@{shape}-type_@{type}-semanticType_@{semanticType}_bc", @design);
+}
+
+.myControlLibrary_Button_fc(@shape, @type, @semanticType, @design) {
+  .myControlLibrary_Button_mixin_gen(color, "myBaseTheme_Button-shape_@{shape}-type_@{type}-semanticType_@{semanticType}_fc", @design);
+}
+
+/**************************/
+/********* Styling ********/
+/**************************/
+
+//define your styles here. this mixin will be called twice (default + inverted)
+//@param @design: either "default" or "inverted" use it to call the color mixins defined at the top of this file
+.myControlLibrary_Button_mixin(@design: default) {
+
+  //Layout
+  margin: 0; //define standard margin to "fix" safari browser who thinks 0em == 2px (?)
+  border: @myBaseTheme_Button_border_width solid;
+  padding: @myBaseTheme_Button_padding_default;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .myControlLibrary_Button_text {
+    .myControlLibrary_Button_text_ff;
+    font-size: @myBaseTheme_Button_text_fs;
+    padding-left: @myBaseTheme_Button_padding_text;
+    padding-right: @myBaseTheme_Button_padding_text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .myControlLibrary_Button_icon_container {
+    display: none;
+    min-width: @myBaseTheme_Button_icon_fs;
+    min-height: @myBaseTheme_Button_icon_fs;
+    align-self: center;
+
+    .sapUiLocalBusyIndicator {
+      background-color: transparent;
+    }
+  }
+
+  .myControlLibrary_Button_icon_container:not(.myControlLibrary_Button_no_icon) {
+    display: block;
+    margin-left: @myBaseTheme_Button_margin_icon_container;
+
+    &:only-child {
+      margin-left: 0;
+    }
+  }
+
+  .myControlLibrary_Button_icon {
+    cursor: pointer;
+
+    font-size: @myBaseTheme_Button_icon_fs;
+  }
+
+  .myControlLibrary_Button_text {
+    vertical-align: middle;
+    height: 100%;
+    display: inline-block;
+
+  }
+
+  .myControlLibrary_Button_icon_container:not(.myControlLibrary_Button_no_icon) ~ .myControlLibrary_Button_text {
+    padding-left: @myBaseTheme_Button_padding_text - @myBaseTheme_Button_margin_icon_container;
+  }
+
+  &.myControlLibrary_Button_shape_circle, &.myControlLibrary_Button_shape_square {
+    .myControlLibrary_Button_icon {
+      vertical-align: middle;
+    }
+  }
+
+  //End Layout
+
+  //Busy
+  &.myControlLibrary_Button_busy {
+    pointer-events: none;
+
+    > span[tabindex] {
+      display: none;
+    }
+
+    .myControlLibrary_Button_icon_container {
+      display: block;
+      margin-left: @myBaseTheme_Button_margin_icon_container;
+      align-self: flex-start;
+
+      &:only-child {
+        margin-left: 0;
+      }
+
+      &.myControlLibrary_Button_no_text {
+        margin-left: 0;
+      }
+
+      .myControlLibrary_Button_icon {
+        visibility: hidden;
+      }
+    }
+
+    .myControlLibrary_Button_text {
+      padding-left: @myBaseTheme_Button_padding_text - @myBaseTheme_Button_margin_icon_container;
+    }
+  }
+
+  //Disabled
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  //Sizes
+  //Big
+  &.myControlLibrary_Button_size_big {
+    height: @myBaseTheme_Button_height_big;
+    min-width: @myBaseTheme_Button_height_big;
+
+    .myControlLibrary_Button_text, .myControlLibrary_Button_icon {
+      line-height: ~"calc(@{myBaseTheme_Button_height_big} - (2 * @{myBaseTheme_Button_padding_default}) - (2 * @{myBaseTheme_Button_border_width}))";
+    }
+  }
+
+  //Small
+  &.myControlLibrary_Button_size_small {
+    height: @myBaseTheme_Button_height_small;
+    min-width: @myBaseTheme_Button_height_small;
+
+    .myControlLibrary_Button_text, .myControlLibrary_Button_icon {
+      line-height: ~"calc(@{myBaseTheme_Button_height_small} - (2 * @{myBaseTheme_Button_padding_default}) - (2 * @{myBaseTheme_Button_border_width}))";
+    }
+  }
+
+  //End Sizes
+
+  //Border Radius
+
+  &.myControlLibrary_Button_shape_regular {
+    border-radius: @myBaseTheme_Button_border_radius_regular;
+  }
+
+  &.myControlLibrary_Button_shape_circle {
+    border-radius: @myBaseTheme_Button_border_radius_circle;
+  }
+
+  &.myControlLibrary_Button_shape_square {
+    border-radius: @myBaseTheme_Button_border_radius_square;
+  }
+
+  //End Border Radius
+
+  //Coloring
+  &.myControlLibrary_Button_shape_regular {
+
+    &.myControlLibrary_Button_type_filled {
+
+      & when (@design = default) {
+        .myControlLibrary_IBusyIndicator_mixin(inverted);
+      }
+
+      & when (@design = inverted) {
+        .myControlLibrary_IBusyIndicator_mixin(inverted);
+      }
+
+      &.myControlLibrary_Button_semantic_type_basic {
+        .myControlLibrary_Button_bgc(regular, filled, basic, @design);
+        .myControlLibrary_Button_bc(regular, filled, basic, @design);
+        .myControlLibrary_Button_fc(regular, filled, basic, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_highlight {
+        .myControlLibrary_Button_bgc(regular, filled, highlight, @design);
+        .myControlLibrary_Button_bc(regular, filled, highlight, @design);
+        .myControlLibrary_Button_fc(regular, filled, highlight, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_sales {
+        .myControlLibrary_Button_bgc(regular, filled, sales, @design);
+        .myControlLibrary_Button_bc(regular, filled, sales, @design);
+        .myControlLibrary_Button_fc(regular, filled, sales, @design);
+      }
+    }
+
+    &.myControlLibrary_Button_type_ghost {
+
+      & when (@design = default) {
+        .myControlLibrary_IBusyIndicator_mixin(default);
+      }
+
+      & when (@design = inverted) {
+        .myControlLibrary_IBusyIndicator_mixin(inverted);
+      }
+
+      &.myControlLibrary_Button_semantic_type_basic {
+        .myControlLibrary_Button_bgc(regular, ghost, basic, @design);
+        .myControlLibrary_Button_bc(regular, ghost, basic, @design);
+        .myControlLibrary_Button_fc(regular, ghost, basic, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_highlight {
+        .myControlLibrary_Button_bgc(regular, ghost, highlight, @design);
+        .myControlLibrary_Button_bc(regular, ghost, highlight, @design);
+        .myControlLibrary_Button_fc(regular, ghost, highlight, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_sales {
+        .myControlLibrary_Button_bgc(regular, ghost, sales, @design);
+        .myControlLibrary_Button_bc(regular, ghost, sales, @design);
+        .myControlLibrary_Button_fc(regular, ghost, sales, @design);
+      }
+    }
+  }
+
+  &.myControlLibrary_Button_shape_circle, &.myControlLibrary_Button_shape_square {
+
+    &.myControlLibrary_Button_type_filled {
+
+      & when (@design = default) {
+        .myControlLibrary_IBusyIndicator_mixin(inverted);
+      }
+
+      & when (@design = inverted) {
+        .myControlLibrary_IBusyIndicator_mixin(default);
+      }
+
+      &.myControlLibrary_Button_semantic_type_basic {
+        .myControlLibrary_Button_bgc(non_regular, filled, basic, @design);
+        .myControlLibrary_Button_bc(non_regular, filled, basic, @design);
+        .myControlLibrary_Button_fc(non_regular, filled, basic, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_highlight {
+        .myControlLibrary_Button_bgc(non_regular, filled, highlight, @design);
+        .myControlLibrary_Button_bc(non_regular, filled, highlight, @design);
+        .myControlLibrary_Button_fc(non_regular, filled, highlight, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_sales {
+        .myControlLibrary_Button_bgc(non_regular, filled, sales, @design);
+        .myControlLibrary_Button_bc(non_regular, filled, sales, @design);
+        .myControlLibrary_Button_fc(non_regular, filled, sales, @design);
+      }
+    }
+
+    &.myControlLibrary_Button_type_ghost {
+
+      & when (@design = default) {
+        .myControlLibrary_IBusyIndicator_mixin(default);
+      }
+
+      & when (@design = inverted) {
+        .myControlLibrary_IBusyIndicator_mixin(inverted);
+      }
+
+      &.myControlLibrary_Button_semantic_type_basic {
+        .myControlLibrary_Button_bgc(non_regular, ghost, basic, @design);
+        .myControlLibrary_Button_bc(non_regular, ghost, basic, @design);
+        .myControlLibrary_Button_fc(non_regular, ghost, basic, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_highlight {
+        .myControlLibrary_Button_bgc(non_regular, ghost, highlight, @design);
+        .myControlLibrary_Button_bc(non_regular, ghost, highlight, @design);
+        .myControlLibrary_Button_fc(non_regular, ghost, highlight, @design);
+      }
+
+      &.myControlLibrary_Button_semantic_type_sales {
+        .myControlLibrary_Button_bgc(non_regular, ghost, sales, @design);
+        .myControlLibrary_Button_bc(non_regular, ghost, sales, @design);
+        .myControlLibrary_Button_fc(non_regular, ghost, sales, @design);
+      }
+    }
+  }
+
+  //End Coloring
+}
+
+.myControlLibrary_Button {
+  .myControlLibrary_Button_mixin();
+}
+
+.myControlLibrary_Button.myControlLibrary_Button_inverted {
+  .myControlLibrary_Button_mixin(inverted);
+}

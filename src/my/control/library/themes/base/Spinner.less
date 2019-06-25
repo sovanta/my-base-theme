@@ -1,0 +1,101 @@
+@import "../../../../../custom/base/globals.less";
+@import "./IBusyIndicator.less";
+
+/**************************/
+/********* Mapping ********/
+/**************************/
+
+//Typo
+.myControlLibrary_Spinner_label_ff {
+  .my_base_theme_ff_regular;
+}
+
+@myBaseTheme_Spinner_label_fs: 1rem;
+
+//Margins
+@myBaseTheme_Spinner_label_margin_top: .8125rem;
+@myBaseTheme_Spinner_label_margin_xtra_small_left: .75rem;
+
+/********* DEFAULT Mapping START *********/
+
+@myBaseTheme_Spinner_fc-design_default: @base_2;
+@myBaseTheme_Spinner_fc_active-design_default: @myBaseTheme_Spinner_fc-design_default;
+@myBaseTheme_Spinner_fc_hover-design_default: @myBaseTheme_Spinner_fc-design_default;
+@myBaseTheme_Spinner_fc_focus-design_default: @myBaseTheme_Spinner_fc-design_default;
+
+/********* DEFAULT Mapping END ***********/
+
+/********* Inverted Mapping START ************/
+
+@myBaseTheme_Spinner_fc-design_inverted: @base_1;
+@myBaseTheme_Spinner_fc_active-design_inverted: @myBaseTheme_Spinner_fc-design_inverted;
+@myBaseTheme_Spinner_fc_hover-design_inverted: @myBaseTheme_Spinner_fc-design_inverted;
+@myBaseTheme_Spinner_fc_focus-design_inverted: @myBaseTheme_Spinner_fc-design_inverted;
+
+/********* Inverted Mapping END **************/
+
+/**************************/
+/********* Mixins *********/
+/**************************/
+
+.myControlLibrary_Spinner_mixin_gen(@property, @colorPrefix, @design) {
+  @color: "@{colorPrefix}-design_@{design}";
+  @color_Active: "@{colorPrefix}_active-design_@{design}";
+  @color_Hover: "@{colorPrefix}_hover-design_@{design}";
+  @color_Focus: "@{colorPrefix}_focus-design_@{design}";
+
+    @{property}: @@color;
+
+  &:not([disabled]) {
+    &:active {
+        @{property}: @@color_Active;
+    }
+    &:hover {
+        @{property}: @@color_Hover;
+    }
+    &:focus {
+        @{property}: @@color_Focus;
+    }
+  }
+}
+
+.myControlLibrary_Spinner_fc(@design) {
+  .myControlLibrary_Spinner_mixin_gen(color, "myBaseTheme_Spinner_fc", @design);
+}
+
+/**************************/
+/********* Styling ********/
+/**************************/
+
+//define your styles here. this mixin will be called twice (default + inverted)
+//@param @design: either "default" or "inverted" use it to call the color mixins defined at the top of this file
+.myControlLibrary_Spinner_mixin(@design: default) {
+
+  &.myControlLibrary_Spinner_busyIndicatorsize_xtra_small {
+    display: flex;
+
+    .sapMLabel {
+      margin: 0 0 0 @myBaseTheme_Spinner_label_margin_xtra_small_left;
+    }
+  }
+
+  .sapMBusyIndicatorBusyArea {
+    min-width: 1em;
+    .myControlLibrary_IBusyIndicator_mixin(@design);
+  }
+
+  .sapMLabel {
+    .myControlLibrary_Spinner_label_ff;
+    .myControlLibrary_Spinner_fc(@design);
+    font-size: @myBaseTheme_Spinner_label_fs;
+    margin-top: @myBaseTheme_Spinner_label_margin_top;
+  }
+}
+
+.myControlLibrary_Spinner {
+  .myControlLibrary_Spinner_mixin();
+}
+
+.myControlLibrary_Spinner.myControlLibrary_Spinner_inverted {
+  .myControlLibrary_Spinner_mixin(inverted);
+}

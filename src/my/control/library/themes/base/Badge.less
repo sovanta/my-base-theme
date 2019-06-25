@@ -1,0 +1,373 @@
+@import "../../../../../custom/base/globals.less";
+
+/* ================================================================= */
+/* Mapping                                                           */
+/* ================================================================= */
+
+.myControlLibrary_Badge_ff {
+  .my_base_theme_ff_regular;
+}
+
+//Modifiers
+@base13_darken: darken(@base_13, 20%);
+
+//Light Type Colors
+@myBaseTheme_Badge_type_light_normal_bc: @base_4;
+@myBaseTheme_Badge_type_light_hover_bc: @base_13;
+@myBaseTheme_Badge_type_light_click_bc: @base13_darken;
+
+@myBaseTheme_Badge_type_light_normal_bgc: @base_1;
+@myBaseTheme_Badge_type_light_hover_bgc: @base_1;
+@myBaseTheme_Badge_type_light_click_bgc: @base_1;
+
+@myBaseTheme_Badge_type_light_content_normal_fc: @base_2;
+@myBaseTheme_Badge_type_light_content_hover_fc: @base_2;
+@myBaseTheme_Badge_type_light_content_click_fc: @base_2;
+
+//box-shadow
+@myBaseTheme_Badge_type_light_normal_bs: 0 0 .5rem 0 rgba(205, 205, 205, 0.5);
+@myBaseTheme_Badge_type_light_hover_bs: 0 0 .5rem 0 rgba(205, 205, 205, 0.5);
+@myBaseTheme_Badge_type_light_click_bs: 0 0 .5rem 0 rgba(205, 205, 205, 0.5);
+
+//Bold Type Colors
+@myBaseTheme_Badge_type_bold_normal_bc: @base_1;
+@myBaseTheme_Badge_type_bold_hover_bc: @base_1;
+@myBaseTheme_Badge_type_bold_click_bc: @base_1;
+
+@myBaseTheme_Badge_type_bold_normal_bgc: @base_13;
+@myBaseTheme_Badge_type_bold_hover_bgc: @base_14;
+@myBaseTheme_Badge_type_bold_click_bgc: @base13_darken;
+
+@myBaseTheme_Badge_type_bold_content_normal_fc: @base_1;
+@myBaseTheme_Badge_type_bold_content_hover_fc: @base_1;
+@myBaseTheme_Badge_type_bold_content_click_fc: @base_1;
+
+//Image Bold Type Colors
+@myBaseTheme_Badge_type_bold_image_normal_bc: @base_1;
+@myBaseTheme_Badge_type_bold_image_hover_bc: @base_13;
+@myBaseTheme_Badge_type_bold_image_click_bc: @base13_darken;
+
+@myBaseTheme_Badge_type_bold_image_normal_bgc: transparent;
+@myBaseTheme_Badge_type_bold_image_hover_bgc: transparent;
+@myBaseTheme_Badge_type_bold_image_click_bgc: transparent;
+
+//box-shadow
+@myBaseTheme_Badge_type_bold_normal_bs: 0 .25rem .5rem 0 rgba(205, 205, 205, 0.5);
+@myBaseTheme_Badge_type_bold_hover_bs: 0 .25rem .5rem 0 rgba(205, 205, 205, 0.5);
+@myBaseTheme_Badge_type_bold_click_bs: 0 .25rem .5rem 0 rgba(205, 205, 205, 0.5);
+@myBaseTheme_Badge_shape_square_bs: 0 .625rem 1.5rem 0 rgba(205, 205, 205, 0.5);
+
+//Additional icon
+@myBaseTheme_Badge_additional_icon_bgc: @base_1;
+@myBaseTheme_Badge_additional_icon_fc: @base_5;
+@myBaseTheme_Badge_additional_icon_bs: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+
+//Measures
+@myBaseTheme_Badge_size_s_diameter: 2.5rem;
+@myBaseTheme_Badge_size_m_diameter: 3.5rem;
+@myBaseTheme_Badge_size_l_diameter: 8.25rem;
+
+@myBaseTheme_Badge_size_s_content_fs: 1rem;
+@myBaseTheme_Badge_size_s_content_icon_fs: 1.125rem;
+@myBaseTheme_Badge_size_m_content_fs: 1.25rem;
+@myBaseTheme_Badge_size_m_content_icon_fs: 1.125rem;
+@myBaseTheme_Badge_size_l_content_fs: 1.625rem;
+@myBaseTheme_Badge_size_l_content_icon_fs: 2.25rem;
+
+@myBaseTheme_Badge_type_light_border: 1px solid;
+@myBaseTheme_Badge_type_bold_border: 2px solid;
+
+//Additional Icon
+@myBaseTheme_Badge_size_s_additional_icon_size: 0.8125rem;
+@myBaseTheme_Badge_size_m_additional_icon_size: 1.25rem;
+@myBaseTheme_Badge_size_l_additional_icon_size: 2.25rem;
+@myBaseTheme_Badge_size_s_additional_icon_fs: 0.6875rem;
+@myBaseTheme_Badge_size_m_additional_icon_fs: 1rem;
+@myBaseTheme_Badge_size_l_additional_icon_fs: 1.75rem;
+@myBaseTheme_Badge_additional_icon_background_padding: 1px;
+@myBaseTheme_Badge_additional_icon_offset: 0;
+
+//Different shapes
+@myBaseTheme_Badge_shape_square_icon_extra_negative_offset: .625rem; //pixel the icon should be moved away from the badge
+
+//Disabled State
+@myBaseTheme_Badge_disabled_opacity: .5;
+
+/* ================================================================= */
+/* Mixins                                                            */
+/* ================================================================= */
+
+//use this to apply colors (border, background, font, box shadow)
+//Prerequisite is that the colors are defined in properly named variables
+.myControlLibrary_Badge_state_colors(@state: normal, @type: light, @content: "") {
+  @patternType: "myBaseTheme_Badge_type_@{type}";
+  @boxShadow: "@{patternType}_@{state}_bs";
+  @bgc: "@{patternType}@{content}_@{state}_bgc";
+  @bc: "@{patternType}@{content}_@{state}_bc";
+  @fc: "@{patternType}_content_@{state}_fc";
+  @border: "@{patternType}_border";
+
+  .myControlLibrary_Badge_outer_circle {
+    border: @@border;
+    box-shadow: @@boxShadow;
+    background-color: @@bgc;
+    border-color: @@bc;
+    pointer-events: none;
+
+    .myControlLibrary_Badge_content {
+      color: @@fc;
+    }
+  }
+  &[disabled] {
+    &, & * {
+      cursor: default;
+    }
+
+    .myControlLibrary_Badge_outer_circle {
+      opacity: @myBaseTheme_Badge_disabled_opacity;
+    }
+  }
+
+
+}
+
+/* ================================================================= */
+/* Styling                                                           */
+/* ================================================================= */
+.myControlLibrary_Badge {
+  box-sizing: border-box;
+  position: relative;
+  .myControlLibrary_Badge_ff;
+
+  &, & * {
+    cursor: default;
+  }
+
+  //sizes
+  &:not(.myControlLibrary_Badge_custom_radius) {
+    &, &.myControlLibrary_Badge_size_s {
+      width: @myBaseTheme_Badge_size_s_diameter;
+      max-width: @myBaseTheme_Badge_size_s_diameter;
+      min-width: @myBaseTheme_Badge_size_s_diameter;
+      height: @myBaseTheme_Badge_size_s_diameter;
+      max-height: @myBaseTheme_Badge_size_s_diameter;
+      min-height: @myBaseTheme_Badge_size_s_diameter;
+      font-size: @myBaseTheme_Badge_size_s_content_fs;
+
+      .myControlLibrary_Badge_content.sapUiIcon {
+        font-size: @myBaseTheme_Badge_size_s_content_icon_fs;
+      }
+
+      .myControlLibrary_Badge_additional_icon {
+        width: @myBaseTheme_Badge_size_s_additional_icon_size;
+        height: @myBaseTheme_Badge_size_s_additional_icon_size;
+        font-size: @myBaseTheme_Badge_size_s_additional_icon_fs;
+      }
+    }
+
+    &.myControlLibrary_Badge_size_m {
+      width: @myBaseTheme_Badge_size_m_diameter;
+      max-width: @myBaseTheme_Badge_size_m_diameter;
+      min-width: @myBaseTheme_Badge_size_m_diameter;
+      height: @myBaseTheme_Badge_size_m_diameter;
+      max-height: @myBaseTheme_Badge_size_m_diameter;
+      min-height: @myBaseTheme_Badge_size_m_diameter;
+      font-size: @myBaseTheme_Badge_size_m_content_fs;
+
+      .myControlLibrary_Badge_content.sapUiIcon {
+        font-size: @myBaseTheme_Badge_size_m_content_icon_fs;
+      }
+
+      .myControlLibrary_Badge_additional_icon {
+        width: @myBaseTheme_Badge_size_m_additional_icon_size;
+        height: @myBaseTheme_Badge_size_m_additional_icon_size;
+        font-size: @myBaseTheme_Badge_size_m_additional_icon_fs;
+      }
+    }
+
+    &.myControlLibrary_Badge_size_l {
+      width: @myBaseTheme_Badge_size_l_diameter;
+      max-width: @myBaseTheme_Badge_size_l_diameter;
+      min-width: @myBaseTheme_Badge_size_l_diameter;
+      height: @myBaseTheme_Badge_size_l_diameter;
+      max-height: @myBaseTheme_Badge_size_l_diameter;
+      min-height: @myBaseTheme_Badge_size_l_diameter;
+      font-size: @myBaseTheme_Badge_size_l_content_fs;
+
+      .myControlLibrary_Badge_content.sapUiIcon {
+        font-size: @myBaseTheme_Badge_size_l_content_icon_fs;
+      }
+
+      .myControlLibrary_Badge_additional_icon {
+        width: @myBaseTheme_Badge_size_l_additional_icon_size;
+        height: @myBaseTheme_Badge_size_l_additional_icon_size;
+        font-size: @myBaseTheme_Badge_size_l_additional_icon_fs;
+      }
+    }
+  }
+
+  //Shape
+  &.myControlLibrary_Badge_shape_square {
+    .myControlLibrary_Badge_outer_circle {
+      &, &:hover, &:focus, &:active {
+        border-radius: 0;
+      }
+    }
+
+    &.myControlLibrary_Badge_has_event_listener:not([disabled]) {
+      &, &:hover, &:focus, &:active {
+        .myControlLibrary_Badge_outer_circle {
+          box-shadow: @myBaseTheme_Badge_shape_square_bs !important;
+        }
+      }
+    }
+  }
+
+  &, &.myControlLibrary_Badge_shape_circle {
+    .myControlLibrary_Badge_outer_circle {
+      border-radius: 50%;
+    }
+  }
+
+  .myControlLibrary_Badge_outer_circle {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .myControlLibrary_Badge_content {
+      font-weight: inherit;
+
+      &.sapUiIcon {
+        line-height: 1;
+      }
+    }
+
+    img {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+    }
+
+    .myControlLibrary_Badge_hide_border& {
+      border-width: 0;
+    }
+
+  }
+
+  .myControlLibrary_Badge_state_colors(normal, light);
+
+  //Interaction States
+  &.myControlLibrary_Badge_has_event_listener:not([disabled]) {
+    &, & * {
+      cursor: pointer;
+    }
+
+    //HOVER
+    &:hover {
+      .myControlLibrary_Badge_state_colors(hover, light);
+
+      &.myControlLibrary_Badge_type_bold {
+        .myControlLibrary_Badge_state_colors(hover, bold);
+
+        &.myControlLibrary_Badge_content_image {
+          .myControlLibrary_Badge_state_colors(hover, bold, _image);
+        }
+      }
+    }
+
+    //ACTIVE
+    &:active {
+      .myControlLibrary_Badge_state_colors(click, light);
+
+      &.myControlLibrary_Badge_type_bold {
+        .myControlLibrary_Badge_state_colors(click, bold);
+
+        &.myControlLibrary_Badge_content_image {
+          .myControlLibrary_Badge_state_colors(click, bold, _image);
+        }
+      }
+    }
+
+  }
+
+  //bold Type
+  &.myControlLibrary_Badge_type_bold {
+    .myControlLibrary_Badge_state_colors(normal, bold);
+
+    &.myControlLibrary_Badge_content_image {
+      .myControlLibrary_Badge_state_colors(normal, bold, _image);
+    }
+  }
+
+
+  //Additional Icon
+  &:not(.myControlLibrary_Badge_additional_icon_show) {
+    .myControlLibrary_Badge_additional_icon {
+      display: none;
+    }
+  }
+
+  &.myControlLibrary_Badge_additional_icon_show {
+    .myControlLibrary_Badge_additional_icon {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: @myBaseTheme_Badge_additional_icon_bgc;
+      color: @myBaseTheme_Badge_additional_icon_fc;
+      box-shadow: @myBaseTheme_Badge_additional_icon_bs;
+      padding: @myBaseTheme_Badge_additional_icon_background_padding;
+    }
+
+    &.myControlLibrary_Badge_additional_icon_position_topleft .myControlLibrary_Badge_additional_icon {
+      top: @myBaseTheme_Badge_additional_icon_offset;
+      left: @myBaseTheme_Badge_additional_icon_offset;
+    }
+
+    &.myControlLibrary_Badge_additional_icon_position_topright .myControlLibrary_Badge_additional_icon {
+      top: @myBaseTheme_Badge_additional_icon_offset;
+      right: @myBaseTheme_Badge_additional_icon_offset;
+    }
+
+    &.myControlLibrary_Badge_additional_icon_position_bottomright .myControlLibrary_Badge_additional_icon {
+      bottom: @myBaseTheme_Badge_additional_icon_offset;
+      right: @myBaseTheme_Badge_additional_icon_offset;
+    }
+
+    &.myControlLibrary_Badge_additional_icon_position_bottomleft .myControlLibrary_Badge_additional_icon {
+      bottom: @myBaseTheme_Badge_additional_icon_offset;
+      left: @myBaseTheme_Badge_additional_icon_offset;
+    }
+
+    &.myControlLibrary_Badge_shape_square {
+
+      &.myControlLibrary_Badge_additional_icon_position_topleft .myControlLibrary_Badge_additional_icon {
+        top: @myBaseTheme_Badge_additional_icon_offset - @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+        left: @myBaseTheme_Badge_additional_icon_offset - @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+      }
+
+      &.myControlLibrary_Badge_additional_icon_position_topright .myControlLibrary_Badge_additional_icon {
+        top: @myBaseTheme_Badge_additional_icon_offset - @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+        right: @myBaseTheme_Badge_additional_icon_offset + @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+      }
+
+      &.myControlLibrary_Badge_additional_icon_position_bottomright .myControlLibrary_Badge_additional_icon {
+        bottom: @myBaseTheme_Badge_additional_icon_offset + @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+        right: @myBaseTheme_Badge_additional_icon_offset + @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+      }
+
+      &.myControlLibrary_Badge_additional_icon_position_bottomleft .myControlLibrary_Badge_additional_icon {
+        bottom: @myBaseTheme_Badge_additional_icon_offset + @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+        left: @myBaseTheme_Badge_additional_icon_offset - @myBaseTheme_Badge_shape_square_icon_extra_negative_offset;
+      }
+
+    }
+  }
+
+}
